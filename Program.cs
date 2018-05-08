@@ -10,7 +10,7 @@ class Program
             Match m = reg.Match(s);
             while (m.Success)
             {
-                String replacement = "\\u" + ((int)m.Value[0]).ToString("X4");
+                String replacement = "\\u" + ((int)m.Value[0]).ToString("X4"); // funcion loca encontrada en internet.
                 s = s.Replace(m.Value, replacement);
                 m = m.NextMatch();
             }
